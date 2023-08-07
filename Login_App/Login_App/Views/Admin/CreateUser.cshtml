@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model User
+<div class="row">
+    <div class="col-6 m-auto">
+<div class="card">
+    <div class="card-header">
+        <h3>Register Users</h3>
+    </div>
+  
+    <div class="card-body">
+      
+        <form asp-controller="Admin" asp-action="CreateUsers" method="post">
+                    <div asp-validation-summary="All"></div>
+            <div>
+                <label class="form-label">Full Name</label>
+                <input asp-for="FullName" type="text" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">Date of Birth</label>
+                <input asp-for="DateofBirth" type="date" class="form-control" />
+                        <span asp-validation-for="DateofBirth" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">User Name</label>
+                <input asp-for="Username" type="text" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">Password</label>
+                <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">Confirm Password</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">Age</label>
+                <input asp-for=Age type="number" class="form-control" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">Phone Number</label>
+                <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="textt-danger"></span>
+            </div>
+            <div>
+                <label class="form-label">E-mail</label>
+                <input asp-for=Email type="email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <input  type="submit" name="Register" class="btn btn-primary mt-2"/>
+            </div>
+
+        </form>
+        @section scripts{
+            <partial name="_ValidationScriptsPartial"/>
+        }
+
+           
+    </div>
+    <div class="card-footer">
+    </div>
+</div>
+</div>
+        
+</div>
+
+
+  

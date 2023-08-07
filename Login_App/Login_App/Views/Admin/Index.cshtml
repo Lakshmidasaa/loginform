@@ -1,0 +1,30 @@
+﻿
+
+@*Admin Login*@
+<div class="align-content-center row mt-3">
+    <div class="m-auto align-content-sm-center col-4">
+        <div class="card bg-secondary">
+            <div class="card-header">
+                <div class="dropdown">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <form asp-asp-controller="Admin" asp-action="Logged" method="post">
+                    <div>
+                        <label class="form-label">Username</label>
+                        <input class="form-control" type="text" />
+                    </div>
+                    <div>
+                        <label class="form-label  ">Password</label>
+                        <input class="form-control" type="password" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Login" class="btn-primary mt-3" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

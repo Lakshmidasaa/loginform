@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Login_App.Models.User>
+
+
+    <table class="table table-hover">
+
+@foreach (var user in Model)
+    {
+        <tr class="table-secondary table-striped table-bordered">
+            <td>
+                @user.Id
+            </td>
+            <td>
+                @user.FullName
+            </td>
+            <td>
+                @user.DateofBirth.ToString("dd/MM/yyyy")
+            </td>
+            <td>
+                @user.Username
+            </td>
+            <td>
+                @user.Password
+            </td>
+            <td>
+                @user.ConfirmPassword
+            </td>
+            <td>
+                @user.Age
+            </td>
+            <td>
+                @user.Phone
+            </td>
+            <td>
+                 @user.Email
+            </td>
+            <td>
+                <btn class="btn btn-secondary">Update</btn>
+            </td>
+            <td>
+                <btn class="btn btn-primary">Delete</btn>
+            </td>
+        </tr>
+    }
+
+</table>
